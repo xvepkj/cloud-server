@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<body>
+  <h2>Files</h2>
+  <ul>
+    {% for f in files %}
+      <li><a href="{{ url_for('download', filename=f) }}">{{ f }}</a></li>
+    {% endfor %}
+  </ul>
+  <h3>Upload</h3>
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+  </form>
+  <br>
+  <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
