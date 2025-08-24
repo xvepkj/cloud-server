@@ -6,3 +6,7 @@ cloudflared tunnel --url http://localhost:5000 &> cloudflared.log &
 tail -f cloudflared.log
 
 grep -o 'https://[^ ]*trycloudflare.com' cloudflared.log
+
+To shutdown pi :
+sudo shutdown now
+
